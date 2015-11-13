@@ -143,7 +143,7 @@ class UserRepository
     {
         // Start the query builder
         $queryBuilder = $this->em->createQueryBuilder();
-        $queryBuilder->select("u")->from("Entity\User", "u")->where("u.email LIKE :email")->setMaxResults(1);
+        $queryBuilder->select("u")->from("Entity\User", "u")->where("u.email = :email")->setMaxResults(1);
 
         $queryBuilder->setParameters([
             "email" => $user->getEmail(),

@@ -8,12 +8,16 @@ trait SecurityTrait
      * Encrypt password
      *
      * @param string $password
+     *
+     * @return string
      */
-    public function encrypt(&$password)
+    public function encrypt($password)
     {
         $password = password_hash($password, PASSWORD_BCRYPT, [
             "cost" => 12,
         ]);
+
+        return $password;
     }
 
     /**

@@ -161,7 +161,7 @@ class User
         // validate if the argument passed is not null,
         // if the value have content, will encrypt.
         if (null != $password) {
-            $this->encrypt($password);
+            $password = $this->encrypt($password);
         }
 
         $this->password = $password;

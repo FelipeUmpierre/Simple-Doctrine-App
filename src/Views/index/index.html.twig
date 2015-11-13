@@ -1,0 +1,51 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading text-uppercase">Search for name or e-mail</div>
+            <div class="panel-body">
+                <form action="{{ route.search }}" method="post">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="text" name="search" placeholder="Keyword" value="{{ search }}"
+                                   class="form-control">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <input type="submit" value="Search" class="btn btn-success">
+                </form>
+            </div>
+        </div>
+
+        {% if userSession.id %}
+            {% if users|length > 0 %}
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="text-center" width="2%">#</th>
+                        <th width="44%">Name</th>
+                        <th width="44%">E-mail</th>
+                        <th class="text-center" width="10%">Country</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td class="text-center">{{ user.id }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                            <td class="text-center">{{ user.country }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% elseif search|length > 0 %}
+                No records found.
+            {% endif %}
+        {% endif %}
+    </div>
+
+{% endblock %}

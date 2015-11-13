@@ -1,0 +1,27 @@
+{
+  "require-dev": {
+    "plasticbrain/php-flash-messages": "dev-master",
+    "doctrine/orm": "2.5.1",
+    "fzaninotto/faker": "^1.6@dev"
+  },
+  "config": {
+    "process-timeout": 600,
+    "preferred-install": "dist",
+    "github-protocols": [
+      "https"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "phpunit/phpunit": "4.8.*",
+    "twig/twig": "~1.0",
+    "symfony/http-foundation": "^2.7",
+    "symfony/var-dumper": "^3.0@dev",
+    "miladrahimi/phprouter": "^2.3"
+  }
+}

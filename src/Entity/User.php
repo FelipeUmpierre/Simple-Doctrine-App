@@ -78,6 +78,7 @@ class User
 
     /**
      * @param int $id
+     *
      * @return User
      */
     public function setId($id)
@@ -97,6 +98,7 @@ class User
 
     /**
      * @param string $name
+     *
      * @return User
      */
     public function setName($name)
@@ -116,6 +118,7 @@ class User
 
     /**
      * @param string $email
+     *
      * @return User
      */
     public function setEmail($email)
@@ -135,6 +138,7 @@ class User
 
     /**
      * @param string $country
+     *
      * @return User
      */
     public function setCountry($country)
@@ -154,6 +158,7 @@ class User
 
     /**
      * @param string $password
+     *
      * @return User
      */
     public function setPassword($password)
@@ -179,6 +184,7 @@ class User
 
     /**
      * @param DateTime $createdAt
+     *
      * @return User
      */
     public function setCreatedAt($createdAt)
@@ -198,6 +204,7 @@ class User
 
     /**
      * @param DateTime $updatedAt
+     *
      * @return User
      */
     public function setUpdatedAt($updatedAt)

@@ -32,6 +32,7 @@ abstract class Routes
      * Return the route by name or the full array
      *
      * @param null $route
+     *
      * @return array
      */
     public static function get($route = null)

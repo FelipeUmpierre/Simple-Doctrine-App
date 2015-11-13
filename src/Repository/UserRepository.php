@@ -31,8 +31,10 @@ class UserRepository
      * Save a user
      *
      * @param User $user
-     * @return User
+     *
      * @throws UniqueConstraintViolationException
+     *
+     * @return User
      */
     public function save(User $user)
     {
@@ -55,6 +57,7 @@ class UserRepository
      * Remove a user
      *
      * @param User $user
+     *
      * @throws \Exception
      */
     public function delete(User $user)
@@ -86,6 +89,7 @@ class UserRepository
      * Find an user by id
      *
      * @param $id
+     *
      * @return null|object
      */
     public function findOne($id)
@@ -97,6 +101,7 @@ class UserRepository
      * Find an user by email
      *
      * @param $email
+     *
      * @return array
      */
     public function findEmail($email)
@@ -113,6 +118,7 @@ class UserRepository
      * ]
      *
      * @param array $search
+     *
      * @return User[]
      */
     public function search(array $search)
@@ -135,9 +141,11 @@ class UserRepository
      * Authentication
      *
      * @param User $user
-     * @return mixed
+     *
      * @throws \Doctrine\ORM\NoResultException
      * @throws \Doctrine\ORM\NonUniqueResultException
+     *
+     * @return mixed
      */
     public function auth(User $user)
     {

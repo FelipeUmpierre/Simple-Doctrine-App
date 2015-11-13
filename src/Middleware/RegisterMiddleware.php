@@ -42,6 +42,7 @@ class RegisterMiddleware implements Middleware
      * Validate credentials, email and password
      *
      * @param Request $request
+     *
      * @return array
      */
     public function validateCredentials(Request $request)

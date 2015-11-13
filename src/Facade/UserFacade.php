@@ -32,8 +32,10 @@ class UserFacade
 
     /**
      * @param User $user
-     * @return mixed
+     *
      * @throws \Exception
+     *
+     * @return mixed
      */
     public function save(User $user)
     {
@@ -42,6 +44,7 @@ class UserFacade
 
     /**
      * @param User $user
+     *
      * @return void
      */
     public function delete(User $user)
@@ -63,6 +66,7 @@ class UserFacade
      * Find one user
      *
      * @param $id
+     *
      * @return User
      */
     public function findOne($id)
@@ -72,6 +76,7 @@ class UserFacade
 
     /**
      * @param $email
+     *
      * @return null|object
      */
     public function findByEmail($email)
@@ -81,6 +86,7 @@ class UserFacade
 
     /**
      * @param array $data
+     *
      * @return \Entity\User[]
      */
     public function search(array $data)

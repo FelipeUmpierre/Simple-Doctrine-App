@@ -25,6 +25,7 @@ trait SecurityTrait
      *
      * @param $password
      * @param $hash
+     * 
      * @return bool
      */
     public function compare($password, $hash)

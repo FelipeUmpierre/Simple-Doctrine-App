@@ -26,7 +26,7 @@ class RegisterMiddleware implements Middleware
 
         if (!empty($error)) {
             $flash = new FlashMessages();
-            $flash->error(implode("<br>", $error));
+            $flash->error($error);
 
             // set the session for the content of the post
             // to be accessed in the view after the redirect
